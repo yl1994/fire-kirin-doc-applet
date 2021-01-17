@@ -1,0 +1,22 @@
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">技术文档</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">接口文档</view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}rpx" bindchange="bindChange">
+  <swiper-item>
+    <view style="margin-top:20rpx;text-align: left;">
+      <text style="margin-left:40rpx;">编程语言</text>
+    </view>
+    <view style="margin: 0 auto;text-algin:left;border-bottom: 1rpx solid #eaecef;width:{{ winWidth -75}}rpx;margin-top:10rpx"></view>
+    <view class="category-container">
+      <view wx:for="{{categoryList}}" wx:key="*this" class="category-icons" bindtap="toTtechnology" data-code="{{ item.code }}">
+        <image src="{{ item.icon}}" ></image>
+        <text>{{ item.title }}</text>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view>开发中，敬请期待....</view>
+  </swiper-item>
+</swiper>

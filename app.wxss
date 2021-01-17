@@ -1,0 +1,91 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+view.technology-title  {
+  text-align: center;
+  font-size: 30rpx;
+}
+view.pre-container {
+  background-color: #282c34;
+    overflow: auto;
+    width: 700rpx;
+    margin: 0 auto;
+    border-radius: 6px;
+    margin-top: 10rpx;
+}
+view.pre-container rich-text {
+  color: #fff;
+    padding-left: 0.5px;
+    position: relative;
+    left: 1.5em;
+    bottom: 0.5em;
+}
+view.article-detail {
+  max-width: 700rpx;
+  margin: 0 auto;
+}
+.article-detail view.title {
+  font-weight: 600;
+  font-size: 40rpx;
+  line-height: 100rpx;
+}
+.article-detail view.sub-title {
+  padding-bottom: .3rem;
+  border-bottom: 3rpx solid #e4e8ec;
+  font-weight: 600;
+}
+view.blockquote{
+  font-size: 1rem;
+  color: #999;
+  border-left: .2rem solid #dfe2e5;
+  margin: 1rem 0;
+  padding: .25rem 0 .25rem 1rem;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-end: 40rpx;
+}
+
+.custom-block.danger, .custom-block.tip, .custom-block.warning {
+  padding: .1rem 1.5rem;
+  border-left-width: .5rem;
+  border-left-style: solid;
+  margin: 1rem 0;
+}
+.custom-block.tip {
+  background-color: #f3f5f7;
+  border-color: #42b983;
+}
+.custom-block.danger {
+  background-color: #ffe6e6;
+  border-color: #c00;
+  color: #4d0000;
+}
+
+.custom-block.warning {
+  background-color: rgba(255,229,100,.3);
+  border-color: #e7c000;
+  color: #6b5900;
+}
+
+.custom-block .custom-block-title {
+  font-weight: 600;
+  margin-bottom: -.4rem;
+}
+p{
+  line-height: 1.7;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}

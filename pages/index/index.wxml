@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="../../images/logo.png" mode="cover"></image>
+      <text class="userinfo-site-en-name">{{siteEnName}}</text>
+      <text class="userinfo-site-name">{{siteName}}</text>
+    </block>
+  </view>
+  <view class="start-button">
+    <button type="primary" bindtap="startRead"> 开始阅读 → </button>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">技术文档、资讯分享，包括但不限于（Ruby、PHP、JavaScript、HTML、CSS、Vue、Flutter） 等方面的技术文档及资讯分享</text>
+  </view>
+</view>

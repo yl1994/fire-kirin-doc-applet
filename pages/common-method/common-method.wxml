@@ -1,0 +1,9 @@
+<view class="article-detail">
+  <view class="title">常用方法及问题处理</view>
+  <view wx:for="{{articleData}}" wx:key="*this">
+    <view class="sub-title">{{index+1}}、{{ item.title }}</view>
+    <view class="pre-container">
+      <rich-text nodes="{{ item.content}}"></rich-text>
+    </view>
+  </view>
+</view>

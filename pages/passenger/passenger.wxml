@@ -1,0 +1,160 @@
+<view class="article-detail">
+  <view class="title">Passenger部署</view>
+  <view class="blockquote">
+    Passenger 是一个 app server，支持基于 Rack 框架的 Ruby app（包括 Rails），Passenger 的特点是需要作为模块编译到 Nginx 中，优点是配置简单，不需要自己写启动脚本
+  </view>
+
+  <view class="custom-block tip">
+    <p class="custom-block-title">提示</p> 
+    <p>操作系统： ubuntu </p> <p>Ruby版本：2.3.0 </p>
+  </view>
+  <view class="sub-title">1.登录用户</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[0]}}">
+    </rich-text>
+  </view>
+  <view class="custom-block danger">
+    <p class="custom-block-title">错误提示</p> 
+    <p>ECDSA host key for 49.67.189.227 has changed and you have requested strict checking</p>
+  </view>
+  <view>
+    解决方法：
+  </view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[1]}}">
+    </rich-text>
+  </view>
+  <view class="custom-block warning">
+    <p class="custom-block-title">注意事项</p> 
+    <p>出于安全考虑，不要使用 root 帐号运行 web 应用。这里新建一个专门用于部署的用户，例如  deploy 或者其它你喜欢的名字。运行以下命令创建用户：</p>
+  </view>
+  <view class="sub-title">2.添加用户</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[2]}}">
+    </rich-text>
+  </view>
+  <view>退出当前 SSH 链接，用新建的帐号重新登陆</view>
+  <view class="sub-title">3.安装rvm及ruby</view>
+  <view>更新apt并安装curl</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[3]}}">
+    </rich-text>
+  </view>
+  <view>安装rvm</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[4]}}">
+    </rich-text>
+  </view>
+  <view>安装ruby</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[5]}}">
+    </rich-text>
+  </view>
+  <view>更换默认gem源</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[6]}}">
+    </rich-text>
+  </view>
+  <view class="sub-title">4.安装panngeser+Nginx</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[7]}}">
+    </rich-text>
+  </view>
+  <view class="custom-block danger">
+    <p class="custom-block-title">Error: Cannot find the curl-config command.</p> 
+    <p>ECDSA host key for 49.67.189.227 has changed and you have requested strict checking</p>
+  </view>
+  <view>
+    解决方法：
+  </view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[8]}}">
+    </rich-text>
+  </view>
+  <view>
+    继续执行安装nginx的命令：
+  </view>
+  <view class="custom-block warning"><p class="custom-block-title">注意</p> <p>1.Yes: download, compile and install Nginx for me. (recommended)
+The easiest way to get started. A stock Nginx 1.0.10 with Passenger
+support, but with no other additional third party modules, will be
+installed for you to a directory of your choice.</p> <p>2.No: I want to customize my Nginx installation. (for advanced users)
+Choose this if you want to compile Nginx with more third party modules
+besides Passenger, or if you need to pass additional options to Nginx's
+'configure' script. This installer will 1) ask you for the location of
+the Nginx source code, 2) run the 'configure' script according to your
+instructions, and 3) run 'make install'.
+Whichever you choose, if you already have an existing Nginx configuration file,
+then it will be preserved.</p> <p>Enter your choice (1 or 2) or press Ctrl-C to abort:</p></view>
+  <view>
+  当遇到这个选择时，建议选择1，1代表自动完整安装并配置nginx,2是代表根据自己需求定制nginx.
+  </view>
+  <view class="custom-block tip"><p class="custom-block-title">提示</p> <p>===Nginx with Passenger support was successfully installed.===</p></view>
+  <view>
+    当你看到这个提示的时候表示已经成功安装，请直接进行第5步否则请继续
+  </view>
+  <view class="custom-block danger"><p class="custom-block-title">错误提示</p> <p>==Permission problems==</p></view>
+  <view>
+    当出现这个提示表示权限不足 需要给用户增加权限
+  </view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[9]}}">
+    </rich-text>
+  </view>
+  <view class="custom-block danger"><p class="custom-block-title">错误提示</p> <p>==Your system does not have a lot of virtual memory==</p></view>
+  <view>当你看到这个提示表示编译pssenger所需空间不足，建立一个大一点的交换空间</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[10]}}">
+    </rich-text>
+  </view>
+  <view>继续执行安装nginx的命令直到出现下面的提示</view>
+  <view class="custom-block tip"><p class="custom-block-title">提示</p> <p>==Nginx with Passenger support was successfully installed.==</p></view>
+  <view class="sub-title">5.项目部署</view>
+  <view>克隆你的项目</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[11]}}">
+    </rich-text>
+  </view>
+  <view>安装mysql</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[12]}}">
+    </rich-text>
+  </view>
+  <view>安装环境运行依赖</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[13]}}">
+    </rich-text>
+  </view>
+  <view>运行迁移及编译静态文件</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[14]}}">
+    </rich-text>
+  </view>
+  <view>生成生成环境秘钥</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[15]}}">
+    </rich-text>
+  </view>
+  <view class="custom-block warning"><p class="custom-block-title">注意事项</p> <p>先确保本地能运行</p></view>
+  <view>nginx配置</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[16]}}">
+    </rich-text>
+  </view>
+  <view class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>少這一行的話，等會 Rails 會找不到 nodejs 的路徑，在 nginx error log 中會有 Message from application: There was an error while trying to load the gem ‘uglifier’. Gem Load Error is: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes. 的錯誤。</p></view>
+  <view>新增 /etc/nginx/sites-enabled/your_project_name.conf</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[17]}}">
+    </rich-text>
+  </view>
+  <view>nginx命令</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[18]}}">
+    </rich-text>
+  </view>
+  <view>启动nginx输入您的域名 若无法访问请检查配置是否正确，或者查看nginx错误日志</view>
+  <view class="sub-title">6.静态文件不显示问题</view>
+  <view class="pre-container">
+    <rich-text nodes="{{passengerPreData[19]}}">
+    </rich-text>
+  </view>
+</view>

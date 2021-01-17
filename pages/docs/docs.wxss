@@ -1,0 +1,45 @@
+/* pages/docs/docs.wxss */
+
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #777;
+}
+
+.on {
+  color: #3eaf7c;
+  border-bottom: 3rpx solid #3eaf7c;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-box view {
+  text-align: center;
+}
+view.category-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.category-icons{
+  margin: 15rpx 25rpx 0 37rpx;
+  display: grid;
+}
+.category-icons image {
+  width: 120rpx;
+  height:120rpx;
+}
+.category-icons text{
+  font-size: 30rpx;
+}

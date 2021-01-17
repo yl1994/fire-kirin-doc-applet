@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/guide/guide",
+    "pages/docs/docs",
+    "pages/information/information",
+    "pages/ruby-technology/ruby-technology",
+    "pages/php-technology/php-technology",
+    "pages/js-technology/js-technology",
+    "pages/html-technology/html-technology",
+    "pages/css-technology/css-technology",
+    "pages/vue-technology/vue-technology",
+    "pages/flutter-technology/flutter-technology",
+    "pages/passenger/passenger",
+    "pages/capistrano/capistrano",
+    "pages/chnage-date/chnage-date",
+    "pages/common-method/common-method",
+    "pages/savon/savon",
+    "pages/bullet/bullet",
+    "pages/exception-notification/exception-notification"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "火麒麟在线文档系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#5c5e6b",
+    "selectedColor": "#3eaf7c",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/docs/docs",
+        "iconPath": "./images/icons/guide.png",
+        "selectedIconPath": "./images/icons/guide-selected.png",
+        "text": "文档"
+      },
+      {
+        "pagePath": "pages/guide/guide",
+        "iconPath": "./images/icons/doc.png",
+        "selectedIconPath": "./images/icons/doc-selected.png",
+        "text": "小白指南"
+      },
+      {
+        "pagePath": "pages/information/information",
+        "iconPath": "./images/icons/information.png",
+        "selectedIconPath": "./images/icons/information-selected.png",
+        "text": "资讯"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "usingComponents": {
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-badge": "weui-miniprogram/badge/badge"
+  }
+}
