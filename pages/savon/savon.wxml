@@ -1,5 +1,17 @@
-<view class="technology-title">
-  <view>
-    <text >敬请期待</text>
+<view class="article-detail">
+  <view class="title">Savon使用</view>
+  <view class="blockquote">
+    Savon是一个Ruby编程语言的SOAP客户端
+  </view>
+  <view class="sub-title">1. 安装</view>
+  <view>Gemfile增加</view>
+  <view class="pre-container">
+    <rich-text nodes="{{savonPreData[0]}}">
+    </rich-text>
+  </view>
+  <view class="sub-title">2.使用</view>
+  <view class="pre-container">
+    <rich-text nodes="{{savonPreData[1]}}">
+    </rich-text>
   </view>
 </view>

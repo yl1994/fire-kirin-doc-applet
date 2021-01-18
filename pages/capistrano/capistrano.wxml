@@ -1,5 +1,134 @@
-<view class="technology-title">
-  <view>
-    <text >敬请期待</text>
+<view class="article-detail">
+  <view class="title">Capistrano自动化部署</view>
+  <view class="blockquote">
+    Capistrano是一种在多台服务器上运行脚本的开源工具，它主要用于部署web应用。它自动完成多台服务器上新版本的同步更新，包括数据库的改变。
   </view>
+  <view class="sub-title">一、新建用户</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[0]}}">
+      </rich-text>
+    </view>
+    <view class="sub-title">二、使用秘钥登录服务器</view>
+    <view>以下演示以Mac机为例子操作。</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[1]}}">
+      </rich-text>
+    </view>
+    <view>现在你再用SSH连服务器，直接ssh deploy@你的ip，不再需要输入密码了。</view>
+    <view class="sub-title"> 三、禁用密码登录（可选）</view>
+    <view>用密码登录服务器， 并不是一个安全的选择。最好方法是直接禁用密码登录，改为必须使用SSH秘钥登录。当然这一步是可选的，和Capistrano并没有什么关系。</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[2]}}">
+      </rich-text>
+    </view>
+    <view class="sub-title">四、服务器基础准备工作</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[3]}}">
+      </rich-text>
+    </view>
+    <view class="sub-title">五、安装Ruby</view>
+    <view>这个步骤大家都会的使用rvm自行安装</view>
+    <view class="sub-title">六、安装MySQL</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[4]}}">
+      </rich-text>
+    </view>
+    <view class="sub-title">七、安装 Nginx + Passenger</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[5]}}">
+      </rich-text>
+    </view>
+    <view class="sub-title">八、Git设置SSH公钥</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[6]}}">
+      </rich-text>
+    </view>
+    <view class="sub-title">九、修改gemfile</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[7]}}">
+      </rich-text>
+    </view>
+    <view class="sub-title">十、将代码推送到Git远程仓库</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[8]}}">
+      </rich-text>
+    </view>
+    <view class="sub-title">十一、配置Capistrano</view>
+    <view>1.生成capistrano的相关配置文件。</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[9]}}">
+      </rich-text>
+    </view>
+    <view>2.编辑 Capfile（项目的根目录下</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[10]}}">
+      </rich-text>
+    </view>
+    <view>3.编辑 config/deploy.rb</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[11]}}">
+      </rich-text>
+    </view>
+    <view>4.编辑config/deploy/production.rb</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[12]}}">
+      </rich-text>
+    </view>
+    <view>5. 尝试报错</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[13]}}">
+      </rich-text>
+    </view>
+    <view class="custom-block danger">
+      <p class="custom-block-title">WARNING</p> 
+      <p>ERROR linked file {your project path}/shared/config/database.yml does not exist on 49.67.188.126</p>
+    </view>
+    <view>解决方法，是需要手动到服务器上，建config/database.yml，config/secrets.yml这两个文件，并做好配置。 服务器上，会出现releases和shared两个目录。releases是每次部署的文件，shared目录则是一些公用的配置文件。那么我们现在就去shared目录中，添加这两个公用的配置文件。</view>
+    <view>6. 新建database.yml文件</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[14]}}">
+      </rich-text>
+    </view>
+    <view>里面填写以下内容，当然，将password换成刚才装MySQL时自己填写的密码</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[15]}}">
+      </rich-text>
+    </view>
+    <view>7. 新建master.key文件</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[16]}}">
+      </rich-text>
+    </view>
+    <view>8. 再试一次</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[17]}}">
+      </rich-text>
+    </view>
+    <view class="sub-title">十二、正式部署</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[18]}}">
+      </rich-text>
+    </view>
+    <view class="sub-title">十三、配置nginx</view>
+    <view>1. 配置nginx支持passenger</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[19]}}">
+      </rich-text>
+    </view>
+    <view>2. 新增一个项目配置</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[20]}}">
+      </rich-text>
+    </view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[21]}}">
+      </rich-text>
+    </view>
+    <view>重启nginx</view>
+    <view class="pre-container">
+      <rich-text nodes="{{capistranoPreData[21]}}">
+      </rich-text>
+    </view>
+    <view class="sub-title">十四、成功</view>
+    <view>打开浏览器输入域名尝试访问</view>
 </view>

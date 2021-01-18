@@ -55,8 +55,9 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/passenger/passenger",
-          "pathName": "pages/passenger/passenger",
+          "name": "pages/chnage-date/chnage-date",
+          "pathName": "pages/chnage-date/chnage-date",
+          "query": "",
           "scene": null
         }
       ]

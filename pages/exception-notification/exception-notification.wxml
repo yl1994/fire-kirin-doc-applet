@@ -1,5 +1,32 @@
-<view class="technology-title">
-  <view>
-    <text >敬请期待</text>
+<view class="article-detail">
+  <view class="title">异常通知</view>
+  <view class="blockquote">
+    异常通知gem提供了一组通知程序，用于在机架/导轨应用程序中发生错误时发送通知。 内置通知程序可以通过电子邮件，Campfire，HipChat，Slack，Mattermost，Teams，IRC，Amazon SNS，Google Chat，Datadog或通过自定义WebHooks传递通知。
   </view>
+  <view class="sub-title">1.Gemfile文件增加</view>
+  <view class="pre-container">
+    <rich-text nodes="{{exceptionPreData[0]}}">
+    </rich-text>
+  </view>
+  <view class="sub-title">2.安装gem</view>
+  <view class="pre-container">
+    <rich-text nodes="{{exceptionPreData[1]}}">
+    </rich-text>
+  </view>
+  <view class="sub-title">3.生成配置文件</view>
+  <view class="pre-container">
+    <rich-text nodes="{{exceptionPreData[2]}}">
+    </rich-text>
+  </view>
+  <view class="sub-title">4.配置</view>
+  <view class="pre-container">
+    <rich-text nodes="{{exceptionPreData[3]}}">
+    </rich-text>
+  </view>
+  <view class="sub-title"> 5.异常通知</view>
+  <view class="pre-container">
+    <rich-text nodes="{{exceptionPreData[3]}}">
+    </rich-text>
+  </view>
+ 
 </view>

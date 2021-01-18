@@ -1,5 +1,16 @@
-<view class="technology-title">
-  <view>
-    <text >敬请期待</text>
+<view class="article-detail">
+  <view class="title">N+1查询检测工具bullet</view>
+  <view class="blockquote">
+    Bullet gem旨在通过减少其进行的查询数量来帮助您提高应用程序的性能。 在开发应用程序时，它将监视您的查询，并在您应添加紧急加载（N + 1查询），使用不必要的紧急加载以及何时使用计数器缓存时通知您。 最佳实践是在开发模式或自定义模式（登台，配置文件等）中使用Bullet。
+  </view>
+  <view class="sub-title">1. 安装</view>
+  <view class="pre-container">
+    <rich-text nodes="{{bulletPreData[0]}}">
+    </rich-text>
+  </view>
+  <view class="sub-title">2、配置</view>
+  <view class="pre-container">
+    <rich-text nodes="{{bulletPreData[1]}}">
+    </rich-text>
   </view>
 </view>
